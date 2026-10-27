@@ -1,0 +1,13 @@
+name: "strava-health-ai-agent"
+acli_version: "0.1.3"
+agent_directory: "app"
+region: "us-central1"
+base_template: "adk"
+language: "python"
+create_params:
+  deployment_target: "agent_runtime"
+  session_type: "agent_platform_sessions"
+  cicd_runner: "github_actions"
+  include_data_ingestion: false
+  datastore: "none"
+  agent_guidance_filename: "GEMINI.md"

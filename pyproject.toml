@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "strava-health-ai-agent"
+version = "1.0.0"
+description = "Proactive health & fitness coaching AI agent based on Strava data and Google Gemini (5-Day AI Agent Intensive)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Strava Health AI Agent Team" }
+]
+keywords = ["strava", "ai-agent", "gemini", "health", "fitness", "mcp", "sports-science", "5-day-ai-agents"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Healthcare Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.1.0",
+]
+gemini = [
+    "google-genai>=0.1.0",
+]
+
+[project.scripts]
+strava-health-agent = "strava_health_agent.cli:main"
+strava-health-mcp = "strava_health_agent.mcp_server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

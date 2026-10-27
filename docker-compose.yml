@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  strava-health-agent:
+    build: .
+    container_name: strava-health-ai-agent
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - STRAVA_CLIENT_ID=${STRAVA_CLIENT_ID:-}
+      - STRAVA_CLIENT_SECRET=${STRAVA_CLIENT_SECRET:-}
+      - STRAVA_REFRESH_TOKEN=${STRAVA_REFRESH_TOKEN:-}
+      - WEBHOOK_URL=${WEBHOOK_URL:-}
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+    command: ["demo", "--scenario", "danger_spike"]

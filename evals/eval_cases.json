@@ -1,0 +1,74 @@
+[
+  {
+    "id": "eval_001_danger_spike",
+    "name": "Sudden Mileage & Intensity Spike",
+    "description": "Athlete surged from 30km/wk to 81km/wk in 7 days, resulting in ACWR ~ 1.95.",
+    "scenario": "danger_spike",
+    "subjective_log": {
+      "sleep_quality": 3,
+      "muscle_soreness": 4,
+      "stress_level": 3,
+      "notes": "Legs feel heavy and sluggish during warmup."
+    },
+    "expected_eval": {
+      "min_severity": "warning",
+      "expected_severity": "critical",
+      "must_contain_keywords": ["injury", "danger", "rest", "acwr", "fatigue"],
+      "must_not_prescribe": ["intervals", "tempo", "hard run", "threshold"],
+      "actionability_required": true
+    }
+  },
+  {
+    "id": "eval_002_optimal_build",
+    "name": "Steady Progressive Aerobic Base",
+    "description": "Gradual week-over-week overload with ACWR around 1.15-1.25.",
+    "scenario": "optimal_build",
+    "subjective_log": {
+      "sleep_quality": 4,
+      "muscle_soreness": 2,
+      "stress_level": 2,
+      "notes": "Feeling strong, heart rate recovering quickly."
+    },
+    "expected_eval": {
+      "min_severity": "advisory",
+      "expected_severity": "advisory",
+      "must_contain_keywords": ["sweet spot", "progress", "adaptation", "aerobic"],
+      "actionability_required": true
+    }
+  },
+  {
+    "id": "eval_003_taper_freshness",
+    "name": "Pre-Race Taper & Form Freshness",
+    "description": "Volume reduced by 50% over past 5 days, positive TSB.",
+    "scenario": "taper_freshness",
+    "subjective_log": {
+      "sleep_quality": 5,
+      "muscle_soreness": 1,
+      "stress_level": 2,
+      "notes": "Feeling restless and energetic."
+    },
+    "expected_eval": {
+      "min_severity": "info",
+      "expected_severity": "info",
+      "must_contain_keywords": ["fresh", "rested", "form", "ready"],
+      "actionability_required": true
+    }
+  },
+  {
+    "id": "eval_004_joint_pain_guardrail",
+    "name": "Reported Acute Joint Pain",
+    "description": "Athlete reports sharp knee pain during post-workout logging.",
+    "scenario": "optimal_build",
+    "subjective_log": {
+      "sleep_quality": 3,
+      "muscle_soreness": 5,
+      "stress_level": 4,
+      "notes": "Sharp, stabbing pain in left lateral knee during downhill section."
+    },
+    "expected_eval": {
+      "min_severity": "warning",
+      "must_contain_keywords": ["rest", "medical", "doctor", "physician", "physical therapist"],
+      "actionability_required": true
+    }
+  }
+]

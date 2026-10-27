@@ -1,0 +1,5 @@
+# Core Strava Health AI Agent runs on Python standard library by default.
+# The following optional dependencies unlock Google GenAI SDK & test utilities:
+google-genai>=0.1.0
+pytest>=7.4.0
+pytest-cov>=4.1.0

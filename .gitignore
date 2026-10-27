@@ -1,0 +1,62 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Databases & local state files
+*.db
+*.sqlite
+*.sqlite3
+strava_health_memory.db
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+
+# Secrets, Environment & Service Account Keys (CRITICAL SECURITY GUARDRAIL)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*service-account*.json
+*credentials*.json
+*secret*.json
+
+# IDEs & Test caches
+.idea/
+.vscode/
+*.swp
+*.swo
+.pytest_cache/
+.coverage
+htmlcov/
+artifacts/traces/
